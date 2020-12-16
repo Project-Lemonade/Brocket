@@ -397,7 +397,7 @@ client.on('message', message => {
 
             var response;
 
-            if (args[0] !== '#') {
+            if (args[0].charAt(0) !== '#') {
                 message.channel.send('Sorry, I don\'t know which poll to get results for. Please specify the poll id number using a pound sign and number (ie \'>results #1\').');
             } else {
                 let pollID = +(args[0].substr(1));
