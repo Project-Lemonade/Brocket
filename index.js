@@ -367,6 +367,7 @@ client.on('message', message => {
                 voteResponse = `There aren't any active polls in this server right now, so you can't vote.`;
 
             } else if (args[0].charAt(0) !== '#') {
+                message.channel.send(`${message.author.toString()}, please insert the poll number`);
                 // Only the vote was supplied
                 if (activePollsInServer.length === 1) {
                     voteResponse = polls.get(activePollsInServer[0]).vote(args[0].toLowerCase(), message.author).message;
