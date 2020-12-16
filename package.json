@@ -1,0 +1,33 @@
+{
+    "name": "brocket",
+    "version": "1.0.0",
+    "description": "bot for project-lemonade staff.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Project-Lemonade/Brocket.git"
+    },
+    "keywords": [
+        "Discord",
+        "polls",
+        "voting",
+        "polling",
+        "bots"
+    ],
+    "author": "Ian Sanders",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Project-Lemonade/Brocket/issues"
+    },
+    "homepage": "https://github.com/iansan5653/discord-votemaster#readme",
+    "dependencies": {
+        "discord.js": "^11.2.1",
+        "uws": "^8.14.1"
+    },
+    "jshintConfig": {
+        "esversion": 6
+    }
+}
