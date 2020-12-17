@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const Enmap = require('enmap');
 
-const prefix = "!!";
+const prefix = ">";
 
 client.commands = new Enmap();
 
@@ -19,20 +19,21 @@ client.on('message', message => {
     const cmd = client.commands.get(command);
     if (!cmd) return;
 
-    cmd.run(client, message, args)
+    cmd.run(client, message, args);
 
-});
 
-fs.readdir('./commands', async(err, files) => {
-    if (err) return console.log;
+    fs.readdir('./commands', async(err, files) => {
+        if (err) return console.log;
 
-    files.forEach(file => {
-        if (!file.endsWith('.js')) return;
+        files.forEach(file => {
+            if (!file.endsWith('.js')) return;
 
-        let props = require(`./commands./${file}`);
-        let cmdName = file.split('.')[0];
+            let props = require(`./commands./${file}`);
+            let cmdName = file.split('.')[0];
 
-        console.log(`${cmdName} has been loaded with no errors.`);
-        client.commands.set(cmdName, props);
+            console.log(`${cmdName} has been loaded with no errors.`);
+            client.commands.set(cmdName, props);
+        });
     });
+
 });
