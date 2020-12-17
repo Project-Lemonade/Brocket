@@ -376,7 +376,7 @@ client.on('message', message => {
                 }
 
                 message.author.send(voteResponse);
-                message.delete()
+                /* message.delete() */
 
             } else {
                 // The ID and vote were supplied
