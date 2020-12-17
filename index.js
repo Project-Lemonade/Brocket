@@ -390,7 +390,7 @@ client.on('message', message => {
                 }
             }
 
-            message.channel.send(voteResponse);
+            message.author.send(voteResponse);
 
             message.delete();
 
