@@ -375,9 +375,6 @@ client.on('message', message => {
                     voteResponse = 'Sorry, I don\'t know which poll to vote on. Please specify the poll id number using a pound sign and a number (ie \'>vote #1 A\') before your vote.';
                 }
 
-                /*   message.author.send(voteResponse);
-                  message.delete() */
-
             } else {
                 // The ID and vote were supplied
                 let pollID = +(args[0].substr(1));
