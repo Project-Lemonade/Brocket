@@ -391,7 +391,9 @@ client.on('message', message => {
             }
 
             message.author.send(voteResponse)
-                /* message.delete();*/
+
+
+            /* message.delete();*/
 
 
         } else if (args[0].toLowerCase() == defaults.triggers.results) {
