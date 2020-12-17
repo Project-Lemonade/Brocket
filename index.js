@@ -375,8 +375,8 @@ client.on('message', message => {
                     voteResponse = 'Sorry, I don\'t know which poll to vote on. Please specify the poll id number using a pound sign and a number (ie \'>vote #1 A\') before your vote.';
                 }
 
-                message.author.send(voteResponse);
-                message.delete()
+                /*   message.author.send(voteResponse);
+                  message.delete() */
 
             } else {
                 // The ID and vote were supplied
@@ -392,8 +392,7 @@ client.on('message', message => {
 
             message.author.send(voteResponse)
 
-
-            /* message.delete();*/
+            message.delete();
 
 
         } else if (args[0].toLowerCase() == defaults.triggers.results) {
